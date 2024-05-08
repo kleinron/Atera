@@ -1,0 +1,17 @@
+{
+    "status": [
+        {
+            "name": "ticketStatus",
+            "asserts": [
+                {
+                    "name": "Open",
+                    "value": "3"
+                },
+                {
+                    "name": "Pending",
+                    "value": "1"
+                }
+            ]
+        }
+    ]
+}

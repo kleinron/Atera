@@ -1,13 +1,28 @@
-Installation: To install the necessary dependencies, run the following command: npm install playwright
+Installation:
+To install the necessary dependencies, run the following command: npm install playwright
 
-Running the Project: To execute the project, use the following command:
-npx playwright test "Spec Name under tests folder" --project=chromium1
+
+Running Tests:
+To execute tests, use the following command: npx playwright tests "Spec Name under tests folder"
+
+Running Tests using predifined scripts:
+To run all tests on all browsers: npm run tests_allBrowsers
 
 Project Structure:
 
+Enviorments control:
+The project enviorment control is a dotenv based, to change an envriments use:
+Example - $env:ENV="test" / Change the test to needed enviorment.
+
+The .env file holds general enviorment varibles 
+
 Fixtures Folder: This folder contains fixture setups using the test.extend function. Fixtures provide reusable setups that offer test contexts or resources.
 
-The base test is extended with custom fixtures, which are instances of PracticeFormPage and BookStorePage. Fixture setup functions are asynchronous and create instances of respective page classes, passing a page object to them. The use function is utilized to define what will be passed to the test after the fixture setup completes, enabling access to the page class instance.
+The baseTest is extended with custom fixtures, which are instances of the pages. Fixture setup functions are asynchronous and create instances of respective page classes, passing a page object to them. The use function is utilized to define what will be passed to the test after the fixture setup completes, enabling access to the page class instance.
+
+auth folder: The project implements reusing of authentication state, in context and gloabl level (Currntly remarked) the authentication detials saved after a succesful login and stored under this folder.
+This method allow us to save time, reduce flakenes, reduce server volume.
+
 Tests Folder: Contains separate test (spec) files for each page object on the website.
 
 Pages Folder: Each page is represented as a page object model, facilitating better organization and maintenance.
