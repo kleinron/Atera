@@ -1,9 +1,14 @@
-Installation:
-To install the necessary dependencies, run the following command: npm install playwright
+## Installation
+To install the necessary dependencies, run the following command: 
+```bash
+npm install playwright
+```
 
-
-Running Tests:
-To execute tests, use the following command: npx playwright tests "Spec Name under tests folder"
+## Running Tests
+To execute tests, use the following command: 
+```bash
+npx playwright tests "Spec Name under tests folder"
+```
 
 Running Tests using predifined scripts:
 To run all tests on all browsers: npm run tests_allBrowsers
